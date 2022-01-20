@@ -1,23 +1,13 @@
-install.packages("tidyverse")
-library(tidyverse)
-library(palmerpenguins)
-# rows = 344 ; columns = 8
-# gray box "blank canvas"
-View(penguins)
+Version: 1.0
 
-ggplot(data = penguins) + 
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm))
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
 
-ggplot(data = penguins) + 
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species))
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
 
-ggplot(data = penguins) + 
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species, shape = island))
-
-ggplot(data = penguins) + 
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species, shape = island)) +
-facet_wrap(~ species, nrow = 1)
-
-ggplot(data = penguins) + 
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species, shape = island)) +
-  facet_grid(island ~ species)
+RnwWeave: Sweave
+LaTeX: pdfLaTeX
